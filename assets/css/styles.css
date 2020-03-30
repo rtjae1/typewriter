@@ -17,7 +17,7 @@ body {
   padding: 0;
   background-image: var(--primaryColor);
   background-repeat: no-repeat;
-  height: 100vh;
+  /* height: 100vh; */
 }
 
 .content {
@@ -25,4 +25,43 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  padding: 5em;
+}
+
+h1 {
+  position: relative;
+  top: 50%;
+  width: 16em;
+  margin: 0 auto;
+  border-right: 3px solid;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  transform: translateY(-50%);
+  display: block;
+  font-size: 20px;
+}
+
+.message {
+  animation: type 7s steps(40) 1s 1 normal both, cursor 500ms steps(40) infinite normal;
+}
+
+@keyframes type {
+  0% {
+    width: 0em;
+  }
+
+  100% {
+    width: 16em;
+  }
+}
+
+@keyframes cursor {
+  0% {
+    border-right-color: var(--secondaryColor);
+  }
+
+  100% {
+    border-right-color: transparent;
+  }
 }
